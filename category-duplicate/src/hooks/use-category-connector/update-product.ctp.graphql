@@ -1,0 +1,6 @@
+mutation UpdateProduct($id: String!, $version: Long!, $categoryId: String!) {
+  updateProduct(id: $id, version: $version, actions: [{addToCategory: {category: {typeId: "category", id: $categoryId}, staged: false}}]) {
+    id
+    version
+  }
+}

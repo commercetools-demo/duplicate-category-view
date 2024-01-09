@@ -1,0 +1,45 @@
+fragment localizedValue on LocalizedString {
+  locale
+  value
+}
+
+query FetchCategory($categoryId: String!) {
+  category(id: $categoryId) {
+    id
+    key
+    version
+    nameAllLocales {
+      ...localizedValue
+    }
+    descriptionAllLocales {
+      ...localizedValue
+    }
+    slugAllLocales {
+      ...localizedValue
+    }
+    parent {
+      id
+    }
+    orderHint
+    metaTitleAllLocales {
+      ...localizedValue
+    }
+    metaKeywordsAllLocales {
+      ...localizedValue
+    }
+    metaDescriptionAllLocales {
+      ...localizedValue
+    }
+    custom {
+      typeRef {
+        typeId
+        id
+      }
+      customFieldsRaw {
+        name
+        value
+      }
+    }
+    stagedProductCount
+  }
+}

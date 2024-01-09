@@ -1,0 +1,25 @@
+deployAs:
+  - name: category-duplicate
+    applicationType: merchant-center-custom-application
+    endpoint: /
+    configuration:
+      standardConfiguration:
+        - key: CUSTOM_VIEW_ID
+          description: The Custom VIEW ID
+          required: true
+        - key: APPLICATION_ID
+          description: The Custom Application ID
+          required: true
+        - key: APPLICATION_URL
+          description: custom app production app URL
+          required: true
+        - key: CLOUD_IDENTIFIER
+          description: one of the following gcp-us, gcp-eu, aws-us, aws-eu
+          required: true
+        - key: INITIAL_PROJECT_KEY
+          description: development project key
+          required: false
+        - key: ENABLE_NEW_JSX_TRANSFORM
+          description: enable new jsx transform
+          required: true
+          default: "true"

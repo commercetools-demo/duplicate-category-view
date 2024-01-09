@@ -1,0 +1,14 @@
+mutation SaveCategory(
+  $key: String!,
+  $name: [LocalizedStringItemInputType!]!,
+  $slug: [LocalizedStringItemInputType!]!,
+  $description: [LocalizedStringItemInputType!],
+  $orderHint:String,
+  $parent:ResourceIdentifierInput,
+  $custom:CustomFieldsDraft
+) {
+  createCategory(draft: {key: $key, name: $name, slug: $slug, description: $description, orderHint: $orderHint, parent: $parent, custom:$custom}) {
+    id,
+    version
+  }
+}

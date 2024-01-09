@@ -1,0 +1,32 @@
+query Products($where: String!) {
+  products(where: $where) {
+    count
+    total
+    results {
+      id
+      version
+      key
+      productType {
+        name
+      }
+
+      masterData {
+        hasStagedChanges
+        published
+        current {
+          nameAllLocales {
+            locale
+            value
+          }
+          categories {
+            id
+          }
+          allVariants {
+            id
+            sku
+          }
+        }
+      }
+    }
+  }
+}
