@@ -1,0 +1,6 @@
+
+mutation DeleteCart($version: Long!, $cartId: String!) {
+  deleteCart(version:$version, id: $cartId) {
+    id
+  }
+}
