@@ -1,6 +1,6 @@
 deployAs:
   - name: category-duplicate
-    applicationType: merchant-center-custom-application
+    applicationType: mc-app
     endpoint: /
     configuration:
       standardConfiguration:
