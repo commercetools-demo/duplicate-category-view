@@ -1,5 +1,5 @@
 query Products($where: String!) {
-  products(where: $where) {
+  products(where: $where, limit: 500) {
     count
     total
     results {
