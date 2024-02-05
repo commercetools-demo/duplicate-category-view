@@ -1,1 +1,1 @@
-# cart-manager
+# Duplicate category
